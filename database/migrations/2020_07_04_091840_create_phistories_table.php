@@ -15,6 +15,8 @@ class CreatePhistoriesTable extends Migration
     {
         Schema::create('phistories', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('profile_id');
+            $table->string('edited_at');
             $table->timestamps();
         });
     }
