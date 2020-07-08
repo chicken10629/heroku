@@ -55,6 +55,6 @@ class ProfileController extends Controller
         $phistory->edited_at = Carbon::now();
         $phistory->save();
 
-      return redirect('admin/profile');
+      return Redirect::back()->with('message','ユーザー情報を更新しました。');
   }
 }

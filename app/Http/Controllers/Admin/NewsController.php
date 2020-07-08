@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\History;
 
 // 以下を追記することでNews Modelが扱えるようになる
 use App\News;
