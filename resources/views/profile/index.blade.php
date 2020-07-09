@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="introduction mx-auto">{{ str_limit($introduction->, 100) }}</p>
+                            <p class="introduction mx-auto">{{ str_limit($headline->introduction, 100) }}</p>
                         </div>
                     </div>
                 </div>
