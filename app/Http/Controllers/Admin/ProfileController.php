@@ -40,7 +40,7 @@ class ProfileController extends Controller
   {
       // Validationをかける
       $this->validate($request, Profile::$rules);
-      // News Modelからデータを取得する
+      // Modelからデータを取得する
       $profile = Profile::find($request->id);
       // 送信されてきたフォームデータを格納する
       $profiles_form = $request->all();
@@ -54,7 +54,9 @@ class ProfileController extends Controller
         $phistory->profile_id = $profile->id;
         $phistory->edited_at = Carbon::now();
         $phistory->save();
+        
+        
 
-      return Redirect::back()->with('message','ユーザー情報を更新しました。');
+    return view('profile.index', ['headline' => $phistory, 'posts' => $phistory]);
   }
 }

@@ -1,10 +1,18 @@
 @extends('layouts.front')
 
 @section('content')
+        <div class="profile-edit">
+            <hr color="#c0c0c0">
+            <div class="col-md-10 mx-auto">
+                <center><h1>プロフィール編集履歴</h1></center>
+            </div>
+        </div>
     <div class="container">
         <hr color="#c0c0c0">
+
         @if (!is_null($headline))
             <div class="row">
+                 <cdnter><h5>最終更新日 {{ $headline->updated_at->format('Y年m月d日') }}</h5S></cdnter>
                 <div class="headline col-md-10 mx-auto">
                     <div class="row">
                         <div class="col-md-6">
